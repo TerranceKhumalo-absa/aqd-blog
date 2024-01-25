@@ -1,0 +1,47 @@
+.list-unstyled li {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.list-unstyled .table-contents-subheading::before {
+    content: "•";
+    position: absolute;
+    left: 15px;
+}
+
+.list-unstyled a {
+    color: black;
+    text-decoration: none;
+    padding-left: 0.5rem;
+}
+
+.list-unstyled .table-contents-subheading a {
+    padding-left: 1.6rem;
+}
+
+.list-unstyled li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -1.5rem; /* moved the line to the very left */
+    top: 0; /* added this */
+    bottom: 0; /* and this */
+    width: 3px;
+    background: #000;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    opacity: 0;
+}
+
+.list-unstyled li.active::after {
+    opacity: 1;
+}
+
+.list-unstyled li.active a {
+    font-weight: bold; /* make the font bold when active */
+}
+
+  .blog-content {
+    max-width: 45em;
+  }
